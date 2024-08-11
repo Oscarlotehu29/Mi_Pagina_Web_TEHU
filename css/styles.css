@@ -1,0 +1,72 @@
+/*
+: >Los pseudoselectores se especifican con dos puntos, indica que son elementos que no existen como tal en html.
+    root --> Es una manera de almacenar variable en css se les conoce como custom properties.
+    La sintaxis de custom properties es la siguiente:
+    guionguion > --Nombre
+    para usar las custom properties debemos de usar var(nombre de la variable)
+*/
+:root{
+    --blanco: #ffffff;
+    --negro: #212131;
+    --primario: #00BFFF;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size:16px;/*1rem = 10px*/
+    font-family:'Gill Sans MT'; /*Aplica las fuentes a todo el documento.*/
+}
+
+.titulo_marca{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--negro);
+}
+
+.titulo_marca span{
+    font-size: 1.5rem;
+    color: var(--primario);
+    font-family: 'Poiret One', cursive;
+}
+
+.contenedor{
+    width: 120rem;
+    margin: 0 auto;  
+    /*
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+
+    podemos hacer lo mismo con:
+    margin: margin_top margin_right margin_bottom margin_left
+    ejemplo:
+    margin: 0 auto 0 auto; pero si los dos primeros valores se repiten, basta con expresar los primeros dos
+    margin: 0 auto
+    */
+}
+.fondo_navegacion{
+    background-color: var(--negro);
+}
+
+.navegacion_principal {
+    /*padding: 1rem; al igual que con la propiedad del margin si usamos solo padding y ponemos un solo valor este aplica para todas las direcciones: top right botton left*/
+    display: flex;
+    justify-content: space-between;
+}
+.navegacion_principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 1rem;/*Se pasa el padding aquí ya que de esta manera ensanchamos el texto del enlace, que el que nos interesa que abarque el color de fondo cuando se hace el efecto hover.*/
+}
+
+.navegacion_principal a:hover{
+    background-color: var(--primario);
+    /*color: var(--negro) en caso de que quisiera que el color de la letra también cambie.*/
+}
