@@ -25,17 +25,47 @@ body{
     font-size:16px;/*1rem = 10px*/
     font-family:'Gill Sans MT'; /*Aplica las fuentes a todo el documento.*/
 }
-
-.titulo_marca{
-    text-align: center;
+ h1{
     font-size: 4rem;
-    color: var(--negro); 
-}
+ }
+ 
+ h2{
+    font-size: 3rem;
+ }
 
-.titulo_marca span{
+ h3{
+    font-size: 1.8rem;
+ }
+
+ h1, h2, h3 {
+    text-align: center;
+    color: var(--negro);
+ }
+
+h1 span{
     font-size: 1.5rem;
     color: var(--primario);
     font-family: 'Poiret One', cursive;
+}
+
+.boton{
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem 1.3rem;
+    font-size: 2rem;
+    margin-top: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media(min-width: 760px){
+    .boton{
+        width: auto; /*El auto significa que el boton se resetea.*/
+    }
 }
 
 .contenedor{
@@ -95,12 +125,21 @@ body{
 }
 
 .contenido-hero{
-    background-color: rgba(0,0,0, .5);
+    background-color: rgba(0,0,0, .5); /*Va de cero a uno la transparencia*/
     background-color: rgb(0 0 0 /50%);
     position: absolute;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.contenido-hero .titulo_marca {
+.contenido-hero h2, .contenido-hero p {
     color: var(--blanco);
+}
+
+.ubicacion {
+    display: flex;
+    align-items: end;
 }
