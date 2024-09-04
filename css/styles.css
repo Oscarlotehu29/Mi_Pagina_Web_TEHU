@@ -60,6 +60,12 @@ h1 span{
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none;
+}
+
+.boton:hover{
+    background-color: var(--primario);
+    cursor: pointer;
 }
 
 @media(min-width: 760px){
@@ -67,6 +73,28 @@ h1 span{
         width: auto; /*El auto significa que el boton se resetea.*/
     }
 }
+
+/* Utilidades */
+
+.w-sm-100{
+    width: 100%;
+}
+@media(min-width: 760px){
+    .w-sm-100{
+        width: auto;
+    }
+}
+.flex{
+    display: flex;
+}
+
+.alinear-derecha{
+    justify-content: flex-end;
+}
+.fondo_navegacion{
+    background-color: var(--negro);
+}
+
 
 .contenedor{
     max-width: 120rem;
@@ -84,9 +112,6 @@ h1 span{
     margin: 0 auto
     */
 }
-.fondo_navegacion{
-    background-color: var(--negro);
-}
 
 .navegacion_principal {
     /*padding: 1rem; al igual que con la propiedad del margin si usamos solo padding y ponemos un solo valor este aplica para todas las direcciones: top right botton left*/
@@ -95,7 +120,7 @@ h1 span{
 }
 
 @media (min-width: 760px){
-    .navegacion_principal{
+    .navegacion_principal{ 
         flex-direction: row;
         justify-content: space-between;
     }
@@ -122,6 +147,7 @@ h1 span{
     background-size: cover;
     height: 400px;
     position: relative;
+    margin-bottom: 2.5rem;
 }
 
 .contenido-hero{
@@ -143,3 +169,100 @@ h1 span{
     display: flex;
     align-items: end;
 }
+
+.sombra{
+    -webkit-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.75);
+    background-color: var(--blanco);
+    padding: 2rem;
+}
+
+/*Servicios*/
+
+@media(min-width: 760px){
+    .servicios {
+        display: grid;
+    
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        
+        column-gap: 5rem; /*Separación entre columnas.*/
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.servicio p{
+    line-height: 2; /*Interlineado*/
+    text-align: center;
+}
+
+/*Formulario contacto*/
+
+.formulario{
+    background-color: var(--negro);
+    width: min(60rem, 100%); /*min toma el valor más pequeño entre ese rango*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.campos{
+
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.enviar .boton{
+    width: 100%;
+}
+
